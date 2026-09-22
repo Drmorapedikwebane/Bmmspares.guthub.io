@@ -1,155 +1,203 @@
 /* ==========================================
    BBM SPARES JAVASCRIPT
+   Mercedes-Benz Parts Specialists
 ========================================== */
 
 
 /*
     BBM SPARES WHATSAPP NUMBER
-
-    South African format:
-    079 672 9393
-
-    WhatsApp format:
-    27796729393
+    Format: country code + number (no spaces, no +)
 */
 
 const WHATSAPP_NUMBER = "27650742860";
 
 
 /* ==========================================
-   PRODUCTS
+   PRODUCTS — MERCEDES-BENZ PARTS
 ========================================== */
 
 
 const PRODUCTS = [
 
+    /* ---------- ENGINE ---------- */
+
     {
         id: 1,
-        name: "Engine Oil Filter",
+        name: "Oil Filter – OM651 / M274",
         category: "Engine",
-        price: 180,
         icon: "⚙️",
-        desc: "Quality replacement oil filter."
+        desc: "Mercedes-Benz oil filter for OM651 diesel & M274 petrol engines."
     },
 
     {
         id: 2,
-        name: "Air Filter",
+        name: "Air Filter – C-Class W204 / W205",
         category: "Engine",
-        price: 250,
         icon: "▦",
-        desc: "Replacement air filter for cleaner intake."
+        desc: "Genuine-fit air filter for Mercedes C-Class W204 & W205."
     },
 
     {
         id: 3,
-        name: "Spark Plug Set",
+        name: "Spark Plug Set – M274 Petrol",
         category: "Engine",
-        price: 420,
         icon: "⚡",
-        desc: "Reliable spark plugs for petrol engines."
+        desc: "Spark plug set for Mercedes M274 4-cylinder petrol engines."
     },
 
     {
         id: 4,
-        name: "Brake Pad Set",
-        category: "Brakes",
-        price: 650,
-        icon: "◉",
-        desc: "Front brake pad replacement set."
+        name: "Timing Chain Kit – OM651 Diesel",
+        category: "Engine",
+        icon: "🔗",
+        desc: "Timing chain kit for Mercedes OM651 diesel engines."
     },
 
     {
         id: 5,
-        name: "Brake Disc",
-        category: "Brakes",
-        price: 850,
-        icon: "◉",
-        desc: "Durable replacement brake disc."
+        name: "Water Pump – C-Class / E-Class",
+        category: "Engine",
+        icon: "💧",
+        desc: "Coolant water pump for Mercedes C-Class & E-Class models."
     },
+
+    /* ---------- BRAKES ---------- */
 
     {
         id: 6,
-        name: "Brake Fluid",
+        name: "Front Brake Pads – W204 / W205",
         category: "Brakes",
-        price: 160,
-        icon: "🧴",
-        desc: "Brake fluid for routine servicing."
+        icon: "◉",
+        desc: "Front brake pad set for Mercedes W204 & W205."
     },
 
     {
         id: 7,
-        name: "Headlight Assembly",
-        category: "Body",
-        price: 2500,
-        icon: "💡",
-        desc: "Replacement headlight assembly."
+        name: "Brake Discs (Pair) – W205",
+        category: "Brakes",
+        icon: "⊙",
+        desc: "Brake disc pair for Mercedes W205 C-Class."
     },
 
     {
         id: 8,
-        name: "Front Grille",
-        category: "Body",
-        price: 950,
-        icon: "▤",
-        desc: "Replacement front grille."
+        name: "Brake Fluid – DOT 4",
+        category: "Brakes",
+        icon: "🧴",
+        desc: "DOT 4 brake fluid for Mercedes-Benz hydraulic brake systems."
     },
 
     {
         id: 9,
-        name: "Side Mirror",
-        category: "Body",
-        price: 780,
-        icon: "🚘",
-        desc: "Replacement side mirror."
+        name: "Brake Wear Sensor – W204",
+        category: "Brakes",
+        icon: "🔌",
+        desc: "Brake pad wear sensor for Mercedes W204."
     },
+
+    /* ---------- BODY ---------- */
 
     {
         id: 10,
-        name: "Car Battery",
-        category: "Electrical",
-        price: 1800,
-        icon: "🔋",
-        desc: "12V vehicle battery."
+        name: "Front Grille – W204",
+        category: "Body",
+        icon: "▤",
+        desc: "Replacement front grille for Mercedes W204 C-Class."
     },
 
     {
         id: 11,
-        name: "LED Headlight Bulbs",
-        category: "Electrical",
-        price: 550,
-        icon: "💡",
-        desc: "Bright replacement LED bulbs."
+        name: "Side Mirror – W205",
+        category: "Body",
+        icon: "🚘",
+        desc: "Replacement side mirror for Mercedes W205."
     },
 
     {
         id: 12,
-        name: "Fan Belt",
+        name: "Headlight Assembly – W204",
+        category: "Body",
+        icon: "💡",
+        desc: "Headlight assembly for Mercedes W204 C-Class."
+    },
+
+    {
+        id: 13,
+        name: "Bonnet Star Emblem",
+        category: "Body",
+        icon: "⭐",
+        desc: "Mercedes-Benz bonnet star emblem (upright style)."
+    },
+
+    /* ---------- ELECTRICAL ---------- */
+
+    {
+        id: 14,
+        name: "Car Battery – AGM 12V",
+        category: "Electrical",
+        icon: "🔋",
+        desc: "AGM 12V battery suitable for Mercedes-Benz vehicles."
+    },
+
+    {
+        id: 15,
+        name: "Crankshaft Position Sensor – M274",
+        category: "Electrical",
+        icon: "📡",
+        desc: "Crankshaft position sensor for Mercedes M274 engines."
+    },
+
+    {
+        id: 16,
+        name: "Ignition Coil – M274 / M270",
+        category: "Electrical",
+        icon: "⚡",
+        desc: "Ignition coil for Mercedes M274 & M270 engines."
+    },
+
+    {
+        id: 17,
+        name: "SAM Module – W204",
+        category: "Electrical",
+        icon: "🧠",
+        desc: "Signal Acquisition Module (SAM) for Mercedes W204."
+    },
+
+    /* ---------- SERVICE ---------- */
+
+    {
+        id: 18,
+        name: "Cabin Air Filter – C-Class",
         category: "Service",
-        price: 380,
+        icon: "🌬️",
+        desc: "Cabin air filter for Mercedes C-Class models."
+    },
+
+    {
+        id: 19,
+        name: "Fuel Filter – OM651 Diesel",
+        category: "Service",
+        icon: "⛽",
+        desc: "Fuel filter for Mercedes OM651 diesel engines."
+    },
+
+    {
+        id: 20,
+        name: "Serpentine Belt – M274",
+        category: "Service",
         icon: "〰️",
-        desc: "Replacement auxiliary drive belt."
+        desc: "Serpentine drive belt for Mercedes M274 engines."
+    },
+
+    {
+        id: 21,
+        name: "Engine Mount – W204 / W205",
+        category: "Service",
+        icon: "🔩",
+        desc: "Engine mount for Mercedes W204 & W205 models."
     }
 
 ];
-
-
-/* ==========================================
-   FORMAT MONEY
-========================================== */
-
-
-const money = (number) => {
-
-    return `R${Number(number).toLocaleString(
-        "en-ZA",
-        {
-            minimumFractionDigits: 2,
-            maximumFractionDigits: 2
-        }
-    )}`;
-
-};
 
 
 /* ==========================================
@@ -251,9 +299,7 @@ function addToCart(id) {
     saveCart(cart);
 
 
-    /*
-        Give the customer visual feedback
-    */
+    /* Visual feedback on the button */
 
     const button =
         document.querySelector(
@@ -294,7 +340,6 @@ function productCard(product) {
 
         <article class="product-card">
 
-
             <div class="product-image">
 
                 ${product.icon}
@@ -303,7 +348,6 @@ function productCard(product) {
 
 
             <div class="product-body">
-
 
                 <span class="product-category">
 
@@ -326,13 +370,6 @@ function productCard(product) {
                 </p>
 
 
-                <div class="price">
-
-                    ${money(product.price)}
-
-                </div>
-
-
                 <button
 
                     class="btn btn-primary add-btn"
@@ -343,13 +380,12 @@ function productCard(product) {
 
                 >
 
-                    Add to Cart
+                    Request Availability & Quotation
 
                 </button>
 
 
             </div>
-
 
         </article>
 
@@ -370,10 +406,6 @@ function renderProducts() {
             "productsGrid"
         );
 
-
-    /*
-        Only run this on Products.html
-    */
 
     if (!grid) {
 
@@ -449,11 +481,6 @@ function renderProducts() {
     }
 
 
-    /*
-        Add click events
-        to Add to Cart buttons
-    */
-
     grid
         .querySelectorAll("[data-add]")
         .forEach(button => {
@@ -477,7 +504,7 @@ function renderProducts() {
 
 
 /* ==========================================
-   DISPLAY CART
+   DISPLAY CART / QUOTE LIST
 ========================================== */
 
 
@@ -488,10 +515,6 @@ function renderCart() {
             "cartItems"
         );
 
-
-    /*
-        Only run this on Cart.html
-    */
 
     if (!cartContainer) {
 
@@ -515,10 +538,6 @@ function renderCart() {
         );
 
 
-    /*
-        Empty cart
-    */
-
     if (cart.length === 0) {
 
         cartLayout.classList.add(
@@ -533,10 +552,6 @@ function renderCart() {
 
     }
 
-
-    /*
-        Cart has products
-    */
 
     cartLayout.classList.remove(
         "hidden"
@@ -580,19 +595,18 @@ function renderCart() {
 
                         <div>
 
+                            <span class="cart-category">
+
+                                ${product.category}
+
+                            </span>
+
+
                             <h3>
 
                                 ${product.name}
 
                             </h3>
-
-
-                            <div class="cart-price">
-
-                                ${money(product.price)}
-                                each
-
-                            </div>
 
 
                             <button
@@ -659,44 +673,6 @@ function renderCart() {
             .join("");
 
 
-    /*
-        Calculate total
-    */
-
-    const total =
-        cart.reduce(
-            (sum, item) => {
-
-
-                const product =
-                    PRODUCTS.find(
-                        product =>
-                            product.id === item.id
-                    );
-
-
-                if (!product) {
-
-                    return sum;
-
-                }
-
-
-                return (
-                    sum +
-                    product.price *
-                    item.qty
-                );
-
-            },
-            0
-        );
-
-
-    /*
-        Calculate item count
-    */
-
     const itemCount =
         cart.reduce(
             (sum, item) =>
@@ -706,20 +682,12 @@ function renderCart() {
 
 
     document.getElementById(
-        "cartTotal"
-    ).textContent =
-        money(total);
-
-
-    document.getElementById(
         "cartItemCount"
     ).textContent =
         itemCount;
 
 
-    /*
-        Plus buttons
-    */
+    /* Plus buttons */
 
     cartContainer
         .querySelectorAll("[data-plus]")
@@ -742,9 +710,7 @@ function renderCart() {
         });
 
 
-    /*
-        Minus buttons
-    */
+    /* Minus buttons */
 
     cartContainer
         .querySelectorAll("[data-minus]")
@@ -767,9 +733,7 @@ function renderCart() {
         });
 
 
-    /*
-        Remove buttons
-    */
+    /* Remove buttons */
 
     cartContainer
         .querySelectorAll("[data-remove]")
@@ -819,11 +783,6 @@ function changeQty(id, amount) {
     item.qty += amount;
 
 
-    /*
-        If quantity reaches zero,
-        remove product
-    */
-
     if (item.qty < 1) {
 
         cart.splice(
@@ -862,7 +821,7 @@ function removeItem(id) {
 
 
 /* ==========================================
-   WHATSAPP CHECKOUT
+   WHATSAPP QUOTATION REQUEST
 ========================================== */
 
 
@@ -874,7 +833,7 @@ function checkoutWhatsApp() {
     if (cart.length === 0) {
 
         alert(
-            "Your cart is empty."
+            "Your parts list is empty."
         );
 
         return;
@@ -882,26 +841,18 @@ function checkoutWhatsApp() {
     }
 
 
-    let total = 0;
-
-
-    /*
-        First part of WhatsApp message
-    */
-
     let messageLines = [
 
-        "Hello BBM Spares, I would like to place an order:",
+        "Hello BBM Spares,",
+
+        "",
+
+        "I would like to request the availability and a quotation for the following Mercedes-Benz parts:",
 
         ""
 
     ];
 
-
-    /*
-        Add every product
-        to WhatsApp message
-    */
 
     cart.forEach(item => {
 
@@ -920,53 +871,29 @@ function checkoutWhatsApp() {
         }
 
 
-        const subtotal =
-            product.price *
-            item.qty;
-
-
-        total += subtotal;
-
-
         messageLines.push(
 
-            `${product.name} x ${item.qty} — ${money(subtotal)}`
+            `• ${product.name} — Qty: ${item.qty}`
 
         );
 
     });
 
 
-    /*
-        Add total
-    */
-
     messageLines.push(
 
         "",
 
-        `Total: ${money(total)}`,
-
-        "",
-
-        "Please confirm availability and collection/delivery details."
+        "Please confirm availability and send me a quotation."
 
     );
 
-
-    /*
-        Turn message into URL
-    */
 
     const message =
         encodeURIComponent(
             messageLines.join("\n")
         );
 
-
-    /*
-        Open WhatsApp
-    */
 
     window.open(
 
@@ -987,16 +914,8 @@ function checkoutWhatsApp() {
 function setup() {
 
 
-    /*
-        Update cart icon
-    */
-
     updateCartCount();
 
-
-    /*
-        Current year
-    */
 
     document
         .querySelectorAll(".year")
@@ -1008,9 +927,7 @@ function setup() {
         });
 
 
-    /*
-        Mobile menu
-    */
+    /* Mobile menu */
 
     const menuButton =
         document.querySelector(
@@ -1040,9 +957,7 @@ function setup() {
     }
 
 
-    /*
-        Product search
-    */
+    /* Product search & filter */
 
     const search =
         document.getElementById(
@@ -1076,13 +991,7 @@ function setup() {
     }
 
 
-    /*
-        Category from homepage
-
-        Example:
-
-        Products.html?category=Engine
-    */
+    /* Category from URL */
 
     const params =
         new URLSearchParams(
@@ -1119,23 +1028,12 @@ function setup() {
     }
 
 
-    /*
-        Render products
-    */
-
     renderProducts();
-
-
-    /*
-        Render cart
-    */
 
     renderCart();
 
 
-    /*
-        WhatsApp checkout button
-    */
+    /* WhatsApp checkout button */
 
     const checkoutButton =
         document.getElementById(
@@ -1153,9 +1051,7 @@ function setup() {
     }
 
 
-    /*
-        Clear cart button
-    */
+    /* Clear list button */
 
     const clearButton =
         document.getElementById(
@@ -1172,7 +1068,7 @@ function setup() {
 
                 const confirmed =
                     confirm(
-                        "Clear all items from your cart?"
+                        "Clear all items from your list?"
                     );
 
 
@@ -1190,9 +1086,7 @@ function setup() {
     }
 
 
-    /*
-        Contact form
-    */
+    /* Contact form */
 
     const enquiryForm =
         document.getElementById(
@@ -1243,10 +1137,6 @@ function setup() {
 
 }
 
-
-/*
-    Start website
-*/
 
 document.addEventListener(
     "DOMContentLoaded",
