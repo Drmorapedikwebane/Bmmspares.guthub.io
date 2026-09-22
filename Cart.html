@@ -4,15 +4,9 @@
 <head>
 
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <title>
-        Your Cart | BBM Spares
-    </title>
+    <title>Quote Request | BBM Spares</title>
 
     <link rel="stylesheet" href="Style.css">
 
@@ -27,49 +21,31 @@
     <div class="container nav-wrap">
 
         <a class="logo" href="index.html">
-
-            <span>
-                BBM
-            </span>
-
-            SPARES
-
+            <span>BBM</span> SPARES
         </a>
 
+        <div class="nav-right">
 
-        <button
-            class="menu-toggle"
-            aria-label="Open menu"
-        >
-            ☰
-        </button>
+            <a class="cart-icon" href="Cart.html" aria-label="Cart">
+                🛒
+                <b class="cart-count">0</b>
+            </a>
 
+            <button class="menu-toggle" aria-label="Open menu">
+                ☰
+            </button>
+
+        </div>
 
         <nav class="nav">
 
-            <a href="index.html">
-                Home
-            </a>
+            <a href="index.html">Home</a>
+            <a href="Products.html">Products</a>
+            <a href="Contacts.html">Contact</a>
 
-            <a href="Products.html">
-                Products
-            </a>
-
-            <a href="Contacts.html">
-                Contact
-            </a>
-
-            <a
-                class="active cart-link"
-                href="Cart.html"
-            >
-
+            <a class="active cart-link" href="Cart.html">
                 Cart
-
-                <b class="cart-count">
-                    0
-                </b>
-
+                <b class="cart-count">0</b>
             </a>
 
         </nav>
@@ -87,17 +63,13 @@
 
     <div class="container">
 
-        <p class="eyebrow">
-            YOUR ORDER
-        </p>
+        <p class="eyebrow">YOUR QUOTE REQUEST</p>
 
-        <h1>
-            Shopping Cart
-        </h1>
+        <h1>Parts Enquiry List</h1>
 
         <p>
-            Review your parts before sending the order
-            to BBM Spares.
+            Review the Mercedes-Benz parts you need, then send
+            your request to BBM Spares for availability and a quotation.
         </p>
 
     </div>
@@ -111,75 +83,48 @@
     <div class="container">
 
 
-        <div
-            id="cartLayout"
-            class="cart-layout"
-        >
+        <div id="cartLayout" class="cart-layout">
 
 
-            <div
-                id="cartItems"
-                class="cart-items"
-            >
-            </div>
+            <div id="cartItems" class="cart-items"></div>
 
 
 
             <aside class="summary-card">
 
-                <h2>
-                    Order Summary
-                </h2>
+                <h2>Request Summary</h2>
 
 
                 <div class="summary-row">
 
-                    <span>
-                        Items
-                    </span>
+                    <span>Parts Requested</span>
 
-                    <b id="cartItemCount">
-                        0
-                    </b>
+                    <b id="cartItemCount">0</b>
 
                 </div>
 
 
-                <div class="summary-row total">
-
-                    <span>
-                        Total
-                    </span>
-
-                    <b id="cartTotal">
-                        R0.00
-                    </b>
-
-                </div>
+                <p class="summary-note">
+                    Prices are not shown online. Send your request
+                    and BBM Spares will reply with availability and a quotation.
+                </p>
 
 
-                <button
-                    id="checkoutBtn"
-                    class="btn btn-whatsapp btn-full"
-                >
-                    Checkout on WhatsApp
+                <button id="checkoutBtn"
+                        class="btn btn-whatsapp btn-full">
+                    Request Availability & Quotation
                 </button>
 
 
-                <a
-                    href="Products.html"
-                    class="continue-link"
-                >
-                    ← Continue shopping
+                <a href="Products.html" class="continue-link">
+                    ← Continue browsing
                 </a>
 
 
-                <button
-                    id="clearCartBtn"
-                    class="clear-btn"
-                    type="button"
-                >
-                    Clear cart
+                <button id="clearCartBtn"
+                        class="clear-btn"
+                        type="button">
+                    Clear list
                 </button>
 
             </aside>
@@ -189,28 +134,16 @@
 
 
 
-        <div
-            id="emptyCart"
-            class="empty-cart hidden"
-        >
+        <div id="emptyCart" class="empty-cart hidden">
 
-            <div class="empty-icon">
-                🛒
-            </div>
+            <div class="empty-icon">🛒</div>
 
-            <h2>
-                Your cart is empty
-            </h2>
+            <h2>Your list is empty</h2>
 
-            <p>
-                Add some parts before checking out.
-            </p>
+            <p>Add some Mercedes-Benz parts before requesting a quote.</p>
 
-            <a
-                class="btn btn-primary"
-                href="Products.html"
-            >
-                Browse Products
+            <a class="btn btn-primary" href="Products.html">
+                Browse Parts
             </a>
 
         </div>
@@ -232,52 +165,28 @@
         <div>
 
             <a class="logo" href="index.html">
-
-                <span>
-                    BBM
-                </span>
-
-                SPARES
-
+                <span>BBM</span> SPARES
             </a>
 
-            <p>
-                Quality auto parts and spares.
-            </p>
+            <p>Mercedes-Benz parts and spares specialists.</p>
 
         </div>
 
 
         <div>
 
-            <b>
-                Quick Links
-            </b>
-
-            <a href="Products.html">
-                Products
-            </a>
-
-            <a href="Contacts.html">
-                Contact
-            </a>
-
-            <a href="Cart.html">
-                Cart
-            </a>
+            <b>Quick Links</b>
+            <a href="Products.html">Products</a>
+            <a href="Contacts.html">Contact</a>
+            <a href="Cart.html">Cart</a>
 
         </div>
 
 
         <div>
 
-            <b>
-                WhatsApp
-            </b>
-
-            <a href="https://wa.me/27650742860">
-                065 0742 860
-            </a>
+            <b>WhatsApp</b>
+            <a href="https://wa.me/27650742860">065 0742 860</a>
 
         </div>
 
@@ -285,11 +194,7 @@
 
 
     <div class="copyright">
-
-        © <span class="year"></span>
-        BBM Spares.
-        All rights reserved.
-
+        © <span class="year"></span> BBM Spares. All rights reserved.
     </div>
 
 </footer>
