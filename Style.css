@@ -90,6 +90,8 @@ a {
     align-items: center;
 
     justify-content: space-between;
+
+    position: relative;
 }
 
 
@@ -108,6 +110,76 @@ a {
 }
 
 
+.nav-right {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    order: 2;
+}
+
+
+/* Cart icon (mobile) */
+
+.cart-icon {
+
+    position: relative;
+
+    display: none;
+
+    font-size: 22px;
+
+    line-height: 1;
+
+    padding: 8px 10px;
+
+    border-radius: 8px;
+
+    background: #1c2126;
+
+    transition: background .2s;
+}
+
+
+.cart-icon:hover {
+
+    background: #262b31;
+}
+
+
+.cart-icon .cart-count {
+
+    position: absolute;
+
+    top: -6px;
+
+    right: -6px;
+
+    background: var(--accent);
+
+    color: #fff;
+
+    min-width: 20px;
+
+    height: 20px;
+
+    border-radius: 50%;
+
+    display: inline-grid;
+
+    place-items: center;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    padding: 0 5px;
+}
+
+
 .nav {
 
     display: flex;
@@ -115,6 +187,8 @@ a {
     align-items: center;
 
     gap: 7px;
+
+    order: 3;
 }
 
 
@@ -155,6 +229,8 @@ a {
 
     background: var(--accent);
 
+    color: #fff;
+
     min-width: 22px;
 
     height: 22px;
@@ -166,6 +242,10 @@ a {
     place-items: center;
 
     font-size: 12px;
+
+    font-weight: 800;
+
+    padding: 0 5px;
 }
 
 
@@ -180,6 +260,10 @@ a {
     border: 0;
 
     font-size: 26px;
+
+    cursor: pointer;
+
+    padding: 4px 8px;
 }
 
 
@@ -808,21 +892,21 @@ a {
 }
 
 
-.price {
-
-    font-size: 21px;
-
-    font-weight: 900;
-
-    margin-bottom: 14px;
-}
-
-
 .add-btn {
 
     margin-top: auto;
 
     width: 100%;
+
+    font-size: 13px;
+
+    padding: 10px 12px;
+
+    min-height: 44px;
+
+    line-height: 1.2;
+
+    text-align: center;
 }
 
 
@@ -842,7 +926,7 @@ a {
 
 
 /* =========================
-   CART
+   CART / QUOTE LIST
 ========================= */
 
 
@@ -915,9 +999,21 @@ a {
 }
 
 
-.cart-price {
+.cart-item .cart-category {
+
+    font-size: 11px;
+
+    color: var(--accent);
 
     font-weight: 900;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    display: block;
+
+    margin-bottom: 4px;
 }
 
 
@@ -975,6 +1071,8 @@ a {
     font-size: 12px;
 
     margin-top: 6px;
+
+    padding: 0;
 }
 
 
@@ -1012,16 +1110,18 @@ a {
 }
 
 
-.summary-row.total {
+.summary-note {
+
+    font-size: 13px;
+
+    color: var(--muted);
 
     border-top:
         1px solid var(--line);
 
-    color: var(--ink);
+    padding-top: 14px;
 
-    font-size: 22px;
-
-    margin: 7px 0 20px;
+    margin: 8px 0 20px;
 }
 
 
@@ -1323,6 +1423,18 @@ footer {
     }
 
 
+    /* SHOW the cart icon on tablet/mobile */
+
+    .cart-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    /* HIDE the "Cart" text link inside the menu
+       — but we want it INSIDE the menu too, so keep it */
+
     .nav {
 
         display: none;
@@ -1333,7 +1445,7 @@ footer {
 
         right: 4%;
 
-        top: 68px;
+        top: 76px;
 
         background: #15191d;
 
@@ -1342,6 +1454,10 @@ footer {
         flex-direction: column;
 
         align-items: stretch;
+
+        border-radius: 10px;
+
+        box-shadow: 0 15px 40px #0008;
     }
 
 
