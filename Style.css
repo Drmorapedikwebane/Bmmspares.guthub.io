@@ -14,6 +14,12 @@
     --green: #168a55;
 
     --white: #fff;
+
+    /* AMG dark palette */
+    --nav-top: #0d0f12;
+    --nav-bottom: #1a1e23;
+    --hero-top: #14181d;
+    --hero-bottom: #1e242b;
 }
 
 
@@ -60,13 +66,18 @@ a {
 
 
 /* =========================
-   HEADER
+   HEADER — AMG STYLE
 ========================= */
 
 
 .site-header {
 
-    background: var(--dark);
+    background:
+        linear-gradient(
+            180deg,
+            var(--nav-top) 0%,
+            var(--nav-bottom) 100%
+        );
 
     color: #fff;
 
@@ -76,8 +87,12 @@ a {
 
     z-index: 20;
 
-    border-bottom:
-        1px solid #292d33;
+    border-bottom: none;
+
+    /* Thin red accent strip */
+    box-shadow:
+        inset 0 -2px 0 0 var(--accent),
+        0 8px 24px rgba(0,0,0,.25);
 }
 
 
@@ -102,6 +117,13 @@ a {
     letter-spacing: 1.5px;
 
     font-size: 22px;
+
+    transition: opacity .2s;
+}
+
+
+.logo:hover {
+    opacity: .85;
 }
 
 
@@ -140,13 +162,17 @@ a {
 
     background: #1c2126;
 
-    transition: background .2s;
+    transition:
+        background .2s,
+        transform .2s;
 }
 
 
 .cart-icon:hover {
 
     background: #262b31;
+
+    transform: translateY(-1px);
 }
 
 
@@ -177,6 +203,8 @@ a {
     font-weight: 800;
 
     padding: 0 5px;
+
+    box-shadow: 0 0 0 2px var(--nav-bottom);
 }
 
 
@@ -203,6 +231,12 @@ a {
     font-size: 14px;
 
     font-weight: 700;
+
+    position: relative;
+
+    transition:
+        color .2s,
+        background .2s;
 }
 
 
@@ -212,6 +246,28 @@ a {
     color: #fff;
 
     background: #262b31;
+}
+
+
+/* AMG-style red underline for the active link */
+
+.nav a.active::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 15px;
+
+    right: 15px;
+
+    bottom: 4px;
+
+    height: 2px;
+
+    background: var(--accent);
+
+    border-radius: 2px;
 }
 
 
@@ -293,6 +349,11 @@ a {
     cursor: pointer;
 
     font-size: 14px;
+
+    transition:
+        background .2s,
+        transform .15s,
+        box-shadow .2s;
 }
 
 
@@ -301,12 +362,18 @@ a {
     background: var(--accent);
 
     color: #fff;
+
+    box-shadow: 0 6px 18px rgba(226,43,43,.35);
 }
 
 
 .btn-primary:hover {
 
     background: var(--accent2);
+
+    transform: translateY(-1px);
+
+    box-shadow: 0 8px 22px rgba(226,43,43,.45);
 }
 
 
@@ -318,11 +385,25 @@ a {
 }
 
 
+.btn-outline:hover {
+
+    border-color: #fff;
+
+    background: rgba(255,255,255,.05);
+}
+
+
 .btn-whatsapp {
 
     background: var(--green);
 
     color: #fff;
+}
+
+
+.btn-whatsapp:hover {
+
+    background: #0f6f43;
 }
 
 
@@ -332,22 +413,57 @@ a {
 
 
 /* =========================
-   HERO
+   HERO — AMG STYLE
 ========================= */
 
 
 .hero {
 
     background:
+        radial-gradient(
+            circle at 78% 45%,
+            rgba(226,43,43,.18),
+            transparent 55%
+        ),
         linear-gradient(
-            110deg,
-            #0c0e11,
-            #1b2026
+            135deg,
+            var(--hero-top) 0%,
+            var(--hero-bottom) 100%
         );
 
     color: #fff;
 
     padding: 92px 0;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* Subtle top hairline that connects to navbar red strip */
+
+.hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    right: 0;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(226,43,43,.35),
+            transparent
+        );
 }
 
 
@@ -362,6 +478,10 @@ a {
     align-items: center;
 
     gap: 60px;
+
+    position: relative;
+
+    z-index: 1;
 }
 
 
@@ -438,7 +558,8 @@ a {
     border-radius: 14px;
 
     box-shadow:
-        0 20px 50px #0004;
+        0 20px 50px #0008,
+        0 0 0 1px rgba(226,43,43,.08);
 }
 
 
@@ -465,6 +586,9 @@ a {
     margin: 20px 0;
 
     filter: grayscale(1);
+
+    text-shadow:
+        0 0 40px rgba(226,43,43,.35);
 }
 
 
@@ -619,7 +743,10 @@ a {
 
     border-radius: 10px;
 
-    transition: .2s;
+    transition:
+        transform .2s,
+        border-color .2s,
+        box-shadow .2s;
 }
 
 
@@ -629,7 +756,10 @@ a {
         translateY(-3px);
 
     border-color:
-        #c8cdd4;
+        rgba(226,43,43,.4);
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.06);
 }
 
 
@@ -704,12 +834,29 @@ a {
 
 .page-hero {
 
-    background: var(--light);
+    background:
+        linear-gradient(
+            135deg,
+            var(--hero-top) 0%,
+            var(--hero-bottom) 100%
+        );
 
-    border-bottom:
-        1px solid var(--line);
+    color: #fff;
+
+    border-bottom: none;
 
     padding: 62px 0;
+
+    position: relative;
+
+    box-shadow:
+        inset 0 -2px 0 0 var(--accent);
+}
+
+
+.page-hero .eyebrow {
+
+    color: #f34b4b;
 }
 
 
@@ -728,7 +875,7 @@ a {
 
     margin: 0;
 
-    color: var(--muted);
+    color: #bfc5ce;
 }
 
 
@@ -827,6 +974,21 @@ a {
     display: flex;
 
     flex-direction: column;
+
+    transition:
+        transform .2s,
+        border-color .2s,
+        box-shadow .2s;
+}
+
+
+.product-card:hover {
+
+    transform: translateY(-3px);
+
+    border-color: rgba(226,43,43,.35);
+
+    box-shadow: 0 12px 30px rgba(0,0,0,.08);
 }
 
 
@@ -1322,7 +1484,9 @@ a {
 .enquiry-form input:focus,
 .enquiry-form textarea:focus {
 
-    border-color: #9aa2ad;
+    border-color: var(--accent);
+
+    box-shadow: 0 0 0 3px rgba(226,43,43,.12);
 }
 
 
@@ -1333,11 +1497,19 @@ a {
 
 footer {
 
-    background: var(--dark);
+    background:
+        linear-gradient(
+            180deg,
+            var(--nav-top) 0%,
+            var(--nav-bottom) 100%
+        );
 
     color: #c5cad1;
 
     padding-top: 45px;
+
+    box-shadow:
+        inset 0 2px 0 0 var(--accent);
 }
 
 
@@ -1423,17 +1595,12 @@ footer {
     }
 
 
-    /* SHOW the cart icon on tablet/mobile */
-
     .cart-icon {
         display: inline-flex;
         align-items: center;
         justify-content: center;
     }
 
-
-    /* HIDE the "Cart" text link inside the menu
-       — but we want it INSIDE the menu too, so keep it */
 
     .nav {
 
@@ -1445,9 +1612,14 @@ footer {
 
         right: 4%;
 
-        top: 76px;
+        top: 84px;
 
-        background: #15191d;
+        background:
+            linear-gradient(
+                180deg,
+                #15191d,
+                #1e242b
+            );
 
         padding: 10px;
 
@@ -1457,7 +1629,9 @@ footer {
 
         border-radius: 10px;
 
-        box-shadow: 0 15px 40px #0008;
+        box-shadow:
+            0 15px 40px #0008,
+            0 0 0 1px rgba(226,43,43,.15);
     }
 
 
@@ -1468,6 +1642,11 @@ footer {
 
     .nav a {
         width: 100%;
+    }
+
+
+    .nav a.active::after {
+        display: none;
     }
 
 
